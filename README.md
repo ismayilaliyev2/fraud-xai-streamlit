@@ -1,9 +1,5 @@
 # Fraud Detection with Explainable AI + Streamlit Dashboard
 
-> **LinkedIn-style summary:** Built an end-to-end fraud detection system using Python, XGBoost, SHAP, FastAPI, Streamlit, Docker, and GitHub Actions. The project trains a fraud risk model, evaluates business-focused metrics such as precision, recall, F1-score, ROC-AUC, PR-AUC and latency, and provides an interactive dashboard where users can test transactions and understand predictions using SHAP explanations.
-
-![Dashboard overview](screenshots/dashboard_overview.svg)
-
 ## 1. Problem Statement
 
 Financial institutions need to detect suspicious transactions quickly while reducing customer friction from false alarms. This project builds a machine learning system that estimates the probability of fraud for each transaction and explains which features drive the prediction.
@@ -191,15 +187,15 @@ Fraud detection is usually imbalanced. A model can achieve high accuracy by pred
 
 ### Dashboard Overview
 
-![Dashboard overview](screenshots/dashboard_overview.svg)
+![Dashboard overview](screenshots/dashboard_overview.png)
 
 ### SHAP Explanation
 
-![SHAP explanation](screenshots/shap_explanation.svg)
+![SHAP explanation](screenshots/shap_explanation.png)
 
-### FastAPI Docs
+### Model Metrics
 
-![API docs](screenshots/api_docs.svg)
+![Model metrics](screenshots/model_metrics.png)
 
 ## 10. Explainable AI
 
@@ -252,14 +248,7 @@ GitHub Actions workflow is included in `.github/workflows/tests.yml`.
 
 See [`MODEL_CARD.md`](MODEL_CARD.md) for intended use, limitations, bias and fairness risks, governance assumptions, and recommended improvements.
 
-## 14. CV Bullet Points
-
-- Built an end-to-end fraud detection system using Python, XGBoost, SHAP, FastAPI, Streamlit and Docker.
-- Designed a fraud risk dashboard that explains individual predictions using SHAP local feature contributions.
-- Evaluated the model using precision, recall, F1-score, ROC-AUC, PR-AUC, confusion matrix values and prediction latency.
-- Created a production-style repository with modular source code, API endpoint, tests, model card, architecture diagram and CI workflow.
-
-## 15. Future Improvements
+## 14. Future Improvements
 
 - Add real transaction data with permission and proper anonymisation.
 - Add MLflow experiment tracking.
