@@ -1,0 +1,17 @@
+{
+  "threshold": 0.35,
+  "accuracy": 0.873,
+  "precision": 0.371,
+  "recall": 0.724,
+  "f1": 0.491,
+  "roc_auc": 0.886,
+  "pr_auc": 0.463,
+  "true_negatives": 2298,
+  "false_positives": 302,
+  "false_negatives": 92,
+  "true_positives": 241,
+  "training_seconds": 3.8,
+  "latency_ms_per_1000_transactions": 4.6,
+  "test_rows": 2933,
+  "fraud_rate": 0.112
+}

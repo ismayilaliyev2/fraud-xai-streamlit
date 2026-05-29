@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate sample data
+        run: python -m src.data_generator --rows 5000 --output data/raw/transactions.csv
+      - name: Train model
+        run: python -m src.train --input data/raw/transactions.csv --model-dir models
+      - name: Run tests
+        run: pytest -q
